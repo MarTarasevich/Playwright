@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "tests/**/*.ts",
+    "playwright.config.ts",
+    "global-setup.ts"
+, "auth.setup.ts"  ]
+}
+  
+

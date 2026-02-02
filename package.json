@@ -1,0 +1,6 @@
+{
+"scripts": {
+  "auth-setup": "npx playwright test tests/auth.setup.ts",
+  "test": "npx playwright test"
+}
+}
