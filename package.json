@@ -1,6 +1,1 @@
-{
-"scripts": {
-  "auth-setup": "npx playwright test tests/auth.setup.ts",
-  "test": "npx playwright test"
-}
-}
+{"scripts":{"auth-setup":"npx playwright test tests/auth.setup.ts","test":"npx playwright test"},"devDependencies":{"@playwright/test":"^1.58.1"}}

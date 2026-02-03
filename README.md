@@ -1,11 +1,25 @@
-Запуск теста в терминале:
+## После клона репозитория
+1 поставить npm
+```bash
+2 npm i -D @playwright/test
+```
 
-npx playwright test tests/smoke.spec.ts --headed --workers=1  // hdsa
 
-npx playwright test testsProd/smoke.CC.ts --project=prod-tests --headed --workers=1
+##Запуск теста в терминале>>>>
 
-npx playwright test testsProd/smoke-all.ts --project=prod-tests --headed --workers=1
+```bash
+npx playwright test tests/smoke.spec.ts --headed --workers=1  // hdsa stg home
 
-npx playwright test testsProd/smoke.CC.ts --project=prod-tests --headed --workers=1
+npx playwright test testsProd/smoke.CC.ts --project=prod-tests --headed --workers=1 // cc find a match & select Blood and Lymph Diseases
 
+npx playwright test testsProd/smoke-all.ts --project=prod-tests --headed --workers=1 
+
+npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --workers=1 
+```
+
+
+##Как запустить codegen>>>>>
+```bash
+npx playwright codegen https://connect.careboxhealth.com/en-US
+```bash
 
