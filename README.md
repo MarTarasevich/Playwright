@@ -1,11 +1,12 @@
 ## После клона репозитория
 1 поставить npm
+2 поставить библиотеки тестов
 ```bash
-2 npm i -D @playwright/test
+npm i -D @playwright/test
 ```
 
 
-##Запуск теста в терминале>>>>
+## Запуск теста в терминале
 
 ```bash
 npx playwright test tests/smoke.spec.ts --headed --workers=1  // hdsa stg home
@@ -18,8 +19,8 @@ npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --
 ```
 
 
-##Как запустить codegen>>>>>
+## Как запустить codegen
 ```bash
 npx playwright codegen https://connect.careboxhealth.com/en-US
-```bash
+```
 
