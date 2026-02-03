@@ -9,13 +9,27 @@ npm i -D @playwright/test
 
 ## Запуск теста в терминале
 
+Staging 
+
 ```bash
 npx playwright test tests/smoke.spec.ts --headed --workers=1  // hdsa stg home
+```
 
+Prod CC
+
+```bash
 npx playwright test testsProd/smoke.CC.ts --project=prod-tests --headed --workers=1 // cc find a match & select Blood and Lymph Diseases
+```
 
+All prod links
+
+```bash
 npx playwright test testsProd/smoke-all.ts --project=prod-tests --headed --workers=1 
+```
 
+Prod . Find check
+
+```bash
 npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --workers=1 
 ```
 
