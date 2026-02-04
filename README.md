@@ -21,23 +21,15 @@ Prod CC
 npx playwright test testsProd/smoke.CC.ts --project=prod-tests --headed --workers=1 // cc find a match & select Blood and Lymph Diseases
 ```
 
-All prod links
+<<<<<<<<<<<<<<<<<<<<All prod links >>>>>>>>>>>>>>>>
 
 ```bash
-npx playwright test testsProd/smoke-all.ts --project=prod-tests --headed --workers=1 
+npx playwright test testsProd/smoke-theirDomain.ts --project=prod-tests --headed --workers=1 
 ```
 
 Prod . Find check
 
 ```bash
-
-```
-
-
-## Как запустить codegen
-```bash
-npx playwright codegen https://connect.careboxhealth.com/en-US
-```
 
 ```bash
 npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --workers=1 
@@ -46,3 +38,21 @@ npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --
 ```bash
 npx playwright test testsProd/smoke.CC.NotMatch.ts --project=prod-tests --headed --workers=1 
 ```
+
+```bash
+npx playwright test smoke.CC.match.ts smoke.CC.notMatch.ts --project=prod-tests --headed 
+```bash
+
+## Запустить ран с отчетом
+```bash
+npx playwright test smoke.CC.match.ts smoke.CC.notMatch.ts --project=prod-tests --headed --reporter=html
+
+npx playwright show-report
+```bash
+
+
+## Как запустить codegen
+```bash
+npx playwright codegen https://connect.careboxhealth.com/en-US
+```
+
