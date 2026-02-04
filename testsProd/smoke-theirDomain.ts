@@ -1,4 +1,4 @@
-// testsProd/smoke-all.ts
+// testsProd/smoke-theirDomain.ts
 import { test, expect } from '@playwright/test';
 
 const sites = [

@@ -30,7 +30,7 @@ npx playwright test testsProd/smoke-all.ts --project=prod-tests --headed --worke
 Prod . Find check
 
 ```bash
-npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --workers=1 
+
 ```
 
 
@@ -39,3 +39,10 @@ npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --
 npx playwright codegen https://connect.careboxhealth.com/en-US
 ```
 
+```bash
+npx playwright test testsProd/smoke.CC.match.ts --project=prod-tests --headed --workers=1 
+```
+
+```bash
+npx playwright test testsProd/smoke.CC.NotMatch.ts --project=prod-tests --headed --workers=1 
+```

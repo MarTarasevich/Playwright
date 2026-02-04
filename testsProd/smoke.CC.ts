@@ -23,5 +23,11 @@ test('open CC Prod and test Condition dropdown', async ({ page }) => {
   // 7. Проверяем, что значение выбралось (опять ТОЛЬКО в поле!)
   await expect(conditionField).toContainText('Blood and Lymph Diseases');
 
+    // ✅ СКРИНШОТ В КОНЦЕ ТЕСТА (всегда сохраняется)
+await page.screenshot({ 
+  path: `screenshots/condition-dropdown-${Date.now()}.png`, 
+  fullPage: true 
+});
+
   console.log('✅ Condition dropdown test passed');
 });
