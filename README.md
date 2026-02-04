@@ -12,7 +12,7 @@ npm i -D @playwright/test
 Staging 
 
 ```bash
-npx playwright test tests/smoke.spec.ts --headed --workers=1  // hdsa stg home
+npx playwright test testsStg/smoke.HDSA.ts --headed --workers=1  // hdsa stg home
 ```
 
 Prod CC
