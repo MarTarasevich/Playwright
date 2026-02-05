@@ -1,7 +1,7 @@
 // testsProd/smoke.CC.match.ts
 import { test, expect } from '@playwright/test';
 
-test('full questionnaire flow: Alpha Thalassemia (Results page)', async ({ page }) => {
+test('Alpha Thalassemia questionnaire flow - Match', async ({ page }) => {
   // 1. Открываем главную
   await page.goto('https://connect.careboxhealth.com/en-US');
 

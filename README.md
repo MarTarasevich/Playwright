@@ -40,12 +40,12 @@ npx playwright test testsProd/smoke.CC.NotMatch.ts --project=prod-tests --headed
 ```
 
 ```bash
-npx playwright test smoke.CC.match.ts smoke.CC.notMatch.ts --project=prod-tests --headed 
+npx playwright test smoke.CC.match.ts smoke.CC.notMatch.ts testsProd/smoke.CC.pre-scrn.NotMatchOtherMatch.ts --project=prod-tests --headed 
 ```bash
 
-## Запустить ран с отчетом
+## Запустить ран с отчетом (все СС тесты)
 ```bash
-npx playwright test smoke.CC.match.ts smoke.CC.notMatch.ts --project=prod-tests --headed --reporter=html
+npx playwright test smoke.CC.match.ts smoke.CC.notMatch.ts testsProd/smoke.CC.pre-scrn.NotMatchOtherMatch.ts --project=prod-tests --headed --reporter=html
 
 npx playwright show-report
 ```bash
@@ -54,5 +54,10 @@ npx playwright show-report
 ## Как запустить codegen
 ```bash
 npx playwright codegen https://connect.careboxhealth.com/en-US
+
+npx playwright test lilly-codegen.ts --project=lilly-stg --headed  
 ```
 
+```bash
+npx playwright test lilly-CTM-600156.ts --project=lilly-stg --headed          // not match
+```
