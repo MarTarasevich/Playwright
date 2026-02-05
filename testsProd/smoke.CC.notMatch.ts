@@ -1,7 +1,7 @@
 // testsProd/smoke.CC.notMatch.ts
 import { test, expect } from '@playwright/test';
 
-test('Cushing Syndrome questionnaire flow', async ({ page }) => {
+test('Cushing Syndrome questionnaire flow - Not Match', async ({ page }) => {
   // 1. Открываем главную
   await page.goto('https://connect.careboxhealth.com/en-US');
   await page.getByRole('button', { name: 'I Agree' }).click();
@@ -16,7 +16,9 @@ test('Cushing Syndrome questionnaire flow', async ({ page }) => {
   await expect(conditionField).toContainText('Endocrine and Metabolic');
 
   await page.getByText('Select a Questionnaire', { exact: true }).click();
-  await page.getByText("Cushing's Syndrome").click();  // Экранирование не нужно в коде
+  const cushingOption = page.getByText("Cushing's Syndrome").first();
+  await expect(cushingOption).toBeVisible();
+  await cushingOption.click();
 
   // 3. Start Questionnaire
   await page.getByRole('button', { name: 'Start the Questionnaire' }).click();
@@ -27,11 +29,14 @@ test('Cushing Syndrome questionnaire flow', async ({ page }) => {
   await yearField.fill('1980');
   await page.getByRole('button', { name: 'Next' }).click();
 
+  // Первый Skip
   await page.getByRole('button', { name: 'Skip', exact: true }).click();
-  await page.getByRole('button', { name: 'Confirm Skip' }).click();
+  await page.locator('#mat-mdc-dialog-0').getByRole('button', { name: 'Confirm Skip' }).click();
 
+  // Второй Skip  
   await page.getByRole('button', { name: 'Skip', exact: true }).click();
-  await page.getByRole('button', { name: 'Confirm Skip' }).click();
+  await page.locator('#mat-mdc-dialog-1').getByRole('button', { name: 'Confirm Skip' }).click();
+
 
   // 5. Medication → Next
   await page.getByText('Medication', { exact: true }).click();
